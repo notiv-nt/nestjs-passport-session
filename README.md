@@ -11,7 +11,12 @@ yarn install
 ## Running the app
 
 ```bash
-yarn start:debug
+yarn start:dev
+```
+
+And open
+```
+http://localhost:3000
 ```
 
 ## Routes:
@@ -20,3 +25,8 @@ yarn start:debug
 - [GET] `/profile` -> Only for authenticated users
 - [POST] `/auth/login`
 - [POST] `/auth/logout`
+
+
+## Login process
+
+Request -> login.guard -> custom.strategy -> auth.service -> User || null -> controller || UnauthorizedException
